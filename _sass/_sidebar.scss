@@ -63,7 +63,7 @@
     position: relative;
     float: right;
     width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
+    margin-left: span(0.25 of 12);
     z-index: 10;
   }
 
@@ -91,11 +91,11 @@
 
   img {
     max-width: 175px;
-    border-radius: 50%;
+    border-radius: 30%;
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
+      border: 0px solid $border-color;
     }
   }
 }
