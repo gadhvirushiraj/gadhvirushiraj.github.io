@@ -5,4 +5,7 @@ image:
   - "/images/posepilot.png"
   - "/images/posepilot2-false.png"
 permalink: /projects/PosePilot/
+date: 2025-01-09
 ---
+
+Will Update this soon !

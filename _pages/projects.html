@@ -5,16 +5,20 @@ permalink: /projects/
 author_profile: true
 ---
 
-<div class="projects-grid">
-  {% assign sorted_projects = site.projects | sort: 'date' | reverse %} {% for
-  post in sorted_projects %}
+<div id="masonry-grid" class="projects-grid">
+  {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+  {% for post in sorted_projects %}
   <div class="project-tile">
     <a href="{{ post.url | relative_url }}">
-      {% if post.image %} {% for img in post.image %}
-      <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
-      {% endfor %} {% else %}
-      <!-- Placeholder if no image is provided -->
-      <div class="no-image">No Image</div>
+      {% if post.image %}
+        <div class="image-container">
+          {% for img in post.image %}
+            <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
+          {% endfor %}
+        </div>
+      {% else %}
+        <!-- Placeholder if no image is provided -->
+        <div class="no-image">No Image</div>
       {% endif %}
       <h3>{{ post.title }}</h3>
       {% if post.description %}
@@ -25,11 +29,30 @@ author_profile: true
   {% endfor %}
 </div>
 
+
+<!-- Include Masonry JS -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+  window.onload = function () {
+    var grid = document.querySelector("#masonry-grid");
+    var masonryInstance = new Masonry(grid, {
+      itemSelector: ".project-tile",
+      columnWidth: 300,  // Set fixed column width to 300px
+      gutter: 20,
+      horizontalOrder: true // Ensures left-to-right ordering
+    });
+
+    // Trigger Masonry layout after page load to fix the spacing issue
+    masonryInstance.layout();
+  };
+</script>
+
+
 <style>
   /* Masonry grid container */
   .projects-grid {
-    column-count: 3;
-    column-gap: 20px;
+    display: block; /* Enable Masonry layout */
+    margin: 0 auto;
   }
 
   /* Individual project tiles */
@@ -38,9 +61,7 @@ author_profile: true
     margin-bottom: 20px;
     border-radius: 8px;
     padding: 12px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    width: 300px; /* Fixed column width */
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     overflow: hidden;
@@ -53,7 +74,6 @@ author_profile: true
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 10px;
-    transition: none;
   }
 
   /* Placeholder for missing images */
@@ -77,12 +97,6 @@ author_profile: true
     color: #8cd2d5;
   }
 
-  .project-tile .project-date {
-    font-size: 0.8em;
-    color: #bbbbbb;
-    margin: 0 0 5px 0;
-  }
-
   .project-tile p {
     font-size: 0.8em;
     color: #cecece;
@@ -102,14 +116,14 @@ author_profile: true
 
   /* Responsive layout */
   @media (max-width: 768px) {
-    .projects-grid {
-      column-count: 2; /* 2 columns for smaller screens */
+    .project-tile {
+      width: calc(50% - 20px); /* 2 columns for smaller screens */
     }
   }
 
   @media (max-width: 480px) {
-    .projects-grid {
-      column-count: 1; /* 1 column for mobile screens */
+    .project-tile {
+      width: 100%; /* 1 column for mobile screens */
     }
   }
 </style>
