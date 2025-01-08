@@ -11,11 +11,11 @@ main:
   - title: "Projects"
     url: /projects/
 
-  # - title: "Publications"
-  #   url: /publications/
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Blogs"
+    url: https://medium.com/@gadhvirushiraj
 
   - title: "CV"
-    url: /cv/
-
-  # - title: "Blog Posts"
-  #   url: /year-archive/
+    url: /files/RushirajGadhviCV.pdf

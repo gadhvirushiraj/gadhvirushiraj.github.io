@@ -14,7 +14,7 @@ A final-year undergraduate student at Plaksha University, pursuing Computer Scie
 
 My interests revolve around Reinforcement Learning, Machine Learning, and Human-Computer Interaction Research. I'm also an enthusiastic advocate for Open Source and an active contributor to its vibrant community.
 
-🪁 Always eager to explore new ideas and make an impact through innovation!
+⚡ Always eager to explore new ideas and make an impact through innovation!
 
 ## 🏆 **Achievements**
 
@@ -47,3 +47,21 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
     Designed game mechanics for employee performance enhancement, leveraging gamification and UX principles to improve user engagement.
   </li>
 </ul>
+
+## 🤩 Things I love to do ....
+<table style="border-collapse: collapse; border: none;">
+  <tr>
+    <td style="border: none;">
+      <h2>⛰️ Trekking</h2>
+      <img src="/images/rushi-trek.png" width="200" height="200"><br>
+    </td>
+    <td style="border: none;">
+      <h2>📟 Electronics</h2>
+      <img src="painting.jpg" width="200" height="200"><br>
+    </td>
+    <td style="border: none;">
+      <h2>🪐 Star Gazing</h2>
+      <img src="photography.jpg" width="200" height="200"><br>
+    </td>
+  </tr>
+</table>

@@ -6,7 +6,8 @@ author_profile: true
 ---
 
 <div class="projects-grid">
-  {% for post in site.projects %}
+  {% assign sorted_projects = site.projects | sort: 'date' | reverse %} {% for
+  post in sorted_projects %}
   <div class="project-tile">
     <a href="{{ post.url | relative_url }}">
       {% if post.image %} {% for img in post.image %}
@@ -33,11 +34,10 @@ author_profile: true
 
   /* Individual project tiles */
   .project-tile {
-    background: #fff;
-    border: 1.5px solid #ddd;
-    border-radius: 6px;
+    background: #24292d;
     margin-bottom: 20px;
-    padding: 10px;
+    border-radius: 8px;
+    padding: 12px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -74,12 +74,18 @@ author_profile: true
   .project-tile h3 {
     font-size: 1em;
     margin: 0 0 10px 0;
-    color: #333;
+    color: #8cd2d5;
+  }
+
+  .project-tile .project-date {
+    font-size: 0.8em;
+    color: #bbbbbb;
+    margin: 0 0 5px 0;
   }
 
   .project-tile p {
     font-size: 0.8em;
-    color: #666;
+    color: #cecece;
     line-height: 1.4;
     margin: 0;
   }
@@ -91,7 +97,7 @@ author_profile: true
   /* Hover effect */
   .project-tile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px #2f7f93;
   }
 
   /* Responsive layout */
