@@ -11,10 +11,14 @@ author_profile: true
   <div class="project-tile">
     <a href="{{ post.url | relative_url }}">
       {% if post.image %}
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+        <div class="image-container">
+          {% for img in post.image %}
+            <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
+          {% endfor %}
+        </div>
       {% else %}
-      <!-- Placeholder if no image is provided -->
-      <div class="no-image">No Image</div>
+        <!-- Placeholder if no image is provided -->
+        <div class="no-image">No Image</div>
       {% endif %}
       <h3>{{ post.title }}</h3>
       {% if post.description %}
@@ -25,9 +29,12 @@ author_profile: true
   {% endfor %}
 </div>
 
+
 <!-- Include Masonry JS -->
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- Include imagesLoaded JS -->
 <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
+
 <script>
   window.onload = function () {
     var grid = document.querySelector("#masonry-grid");
@@ -38,16 +45,32 @@ author_profile: true
         itemSelector: ".project-tile",
         columnWidth: 300,  // Set fixed column width to 300px
         gutter: 20,
-        horizontalOrder: true // Ensures left-to-right ordering
+        horizontalOrder: true, // Ensures left-to-right ordering
+        percentPosition: true // Helps ensure proper positioning even after image load
       });
 
       // Trigger Masonry layout after content is fully loaded and rendered
       masonryInstance.layout();
+
+      // Add listener to recalculate layout when images are dynamically loaded or resized
+      window.addEventListener("resize", function() {
+        masonryInstance.layout();
+      });
     });
+
+    // Fallback timeout to recalculate layout if the images loaded slowly
+    setTimeout(function() {
+      var grid = document.querySelector("#masonry-grid");
+      var masonryInstance = new Masonry(grid, {
+        itemSelector: ".project-tile",
+        columnWidth: 300,
+        gutter: 20,
+        horizontalOrder: true
+      });
+      masonryInstance.layout();
+    }, 1000); // Trigger layout recalculation after 3 seconds if images load slowly
   };
 </script>
-
-
 
 <style>
   /* Masonry grid container */
