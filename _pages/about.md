@@ -5,7 +5,7 @@ permalink: /
 author_profile: true
 redirect_from:
   - /about/
-  - /aboutme 
+  - /aboutme
   - /me/
 ---
 
@@ -48,7 +48,7 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
   </li>
 </ul>
 
-## 🤩 Things I love to do ....
+<!-- ## 🤩 Things I love to do ....
 <table style="border-collapse: collapse; border: none;">
   <tr>
     <td style="border: none;">
@@ -64,4 +64,4 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
       <img src="photography.jpg" width="200" height="200"><br>
     </td>
   </tr>
-</table>
+</table> -->
