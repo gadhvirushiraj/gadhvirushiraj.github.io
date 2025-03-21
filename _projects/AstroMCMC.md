@@ -4,6 +4,8 @@ description: "I worked on this project during my internship at Physical Research
 image: "/images/astromcmc.png"
 permalink: /projects/astromcmc/
 date: 2025-01-07
+tags: ["Astro Phys", "Research"]
+code: "https://github.com/gadhvirushiraj/AstroMCMC"
 ---
 
 Will Update this soon !

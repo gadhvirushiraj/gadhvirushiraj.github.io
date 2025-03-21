@@ -4,6 +4,7 @@ description: "Detects and addresses temporary impairments caused by environmenta
 image: "/images/khalasiIO_img.jpg"
 permalink: /projects/KhalasiIO/
 date: 2025-01-10
+tags: ["HCI", "Research"]
 ---
 
 Will Update this soon !

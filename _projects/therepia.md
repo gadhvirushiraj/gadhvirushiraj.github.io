@@ -4,6 +4,8 @@ description: "Therepia mobile app helps monitor Parkinson's disease by using adv
 image: "/images/therepia.png"
 permalink: /projects/PosePilot/
 date: 2025-01-06
+tags: ["AppDev", "Hackathon"]
+code: "https://github.com/malhaar2002/therapia"
 ---
 
 Will Update this soon !

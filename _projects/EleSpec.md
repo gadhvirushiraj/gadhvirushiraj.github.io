@@ -4,6 +4,8 @@ description: "Objective of the software EleSpec is to simplify the process of vi
 image: "/images/elespec.png"
 permalink: /projects/EleSpec/
 date: 2025-01-08
+tags: ["Astro Phys", "Research"]
+code: "https://github.com/gadhvirushiraj/EleSpec"
 ---
 
 Will Update this soon !

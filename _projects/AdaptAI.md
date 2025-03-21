@@ -4,6 +4,8 @@ description: "AdaptAI is a multimodal AI system that enhances productivity and w
 image: "/images/adaptai-arch.png"
 permalink: /projects/adaptai/
 date: 2025-02-23
+tags: ["HCI", "Research"]
+code: "https://github.com/gadhvirushiraj/AdaptAI"
 ---
 
 Will Update this soon!

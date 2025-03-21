@@ -4,6 +4,8 @@ description: "page2circuit converts a hand-drawn circuit into digital schematics
 image: "/images/page2circuit.png"
 permalink: /projects/page2circuit/
 date: 2025-01-06
+tags: ["DL", "Personal"]
+code: "https://github.com/gadhvirushiraj/page2circuit"
 ---
 
 Will Update this soon !

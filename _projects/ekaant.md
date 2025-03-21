@@ -4,6 +4,8 @@ description: "An application that guides you through your meditation practise. E
 image: "/images/ekaant.png"
 permalink: /projects/ekaant/
 date: 2025-01-05
+tags: ["AppDev", "Personal"]
+code: "https://github.com/gadhvirushiraj/ekaant"
 ---
 
 Will Update this soon !

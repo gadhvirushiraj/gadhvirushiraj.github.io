@@ -6,6 +6,8 @@ image:
   - "/images/posepilot2-false.png"
 permalink: /projects/PosePilot/
 date: 2025-01-09
+tags: ["CV", "Research"]
+code: "https://github.com/gadhvirushiraj/PosePilot"
 ---
 
 Will Update this soon !
