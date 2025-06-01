@@ -17,17 +17,13 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
 ⚡ Always eager to explore new ideas and make an impact through innovation! -->
 
 <div class="bio-box">
-
 <h1>Namaste World! 👋 I'm Rushiraj</h1>
-
 <img src="/images/ai_climbs.webp" alt="woah" style="float: right; width: 225px; margin-left: 1rem; margin-bottom: 0.5rem;">
-
 A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
 <br><br>
-My interests revolve around Reinforcement Learning, Machine Learning, and Human-Computer Interaction Research. I'm also an enthusiastic advocate for Open Source and an active contributor to its vibrant community.
+An AI/ML Developer & Researcher, my research interests revolve around the domains of Reinforcement Learning, Machine Learning, and Human-Computer Interaction. I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community.
 <br><br>
 ⚡ Always eager to explore new ideas and make an impact through innovation!
-
 </div>
 
 <style>
@@ -41,13 +37,149 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
 }
 </style>
 
+<!--  -->
+<!-- GALLERY -->
+<!--  -->
+<!--
+<h2 style="margin-top: 2rem;">📸 <strong>Gallery</strong></h2>
+
+<div class="gallery-scroll-container">
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery1.jpg" alt="Gallery image 1">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery2.jpg" alt="Gallery image 2">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 3">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 4">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 5">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 6">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 7">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 8">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 9">
+  </div>
+  <div class="gallery-image-wrapper">
+    <img src="/images/gallery3.jpg" alt="Gallery image 10">
+  </div>
+</div>
+
+<style>
+.gallery-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  background: linear-gradient(135deg, #161b22, #1e2630);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.08);
+  scrollbar-width: none; /* Firefox */
+}
+.gallery-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.gallery-image-wrapper {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image-wrapper img {
+  display: block;
+  max-width: 200px;
+  object-fit: cover;
+}
+</style>
+
+<script>
+  const gallery = document.querySelector('.gallery-scroll-container');
+  let scrollAmount = 1;
+  let isUserScrolling = false;
+
+  // Disable auto-scroll while dragging or scrolling
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  gallery.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+    isUserScrolling = true;
+  });
+
+  gallery.addEventListener('mouseleave', () => {
+    isDragging = false;
+  });
+
+  gallery.addEventListener('mouseup', () => {
+    isDragging = false;
+    setTimeout(() => isUserScrolling = false, 1500);
+  });
+
+  gallery.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - gallery.offsetLeft;
+    const walk = (x - startX) * 1.5; // scroll-fastness
+    gallery.scrollLeft = scrollLeft - walk;
+  });
+
+  gallery.addEventListener('scroll', () => {
+    isUserScrolling = true;
+    clearTimeout(window._scrollTimeout);
+    window._scrollTimeout = setTimeout(() => isUserScrolling = false, 1500);
+  });
+
+  function autoScrollGallery() {
+    if (!gallery || isUserScrolling) return;
+
+    if (gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 1) {
+      gallery.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+
+  setInterval(autoScrollGallery, 60); // 20% slower than 50ms
+</script> -->
+
+<!--  -->
+<!-- ACHIEVEMENT SECTION -->
+<!--  -->
+
 ## 🏆 <strong>Achievements</strong>
 
 <style>
 .achievement-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
@@ -109,15 +241,19 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
   </div>
 
   <div class="achievement-item">
-    <span class="achievement-title">1st Rank IIT Bombay E-Cell BnB 2022</span>
+    <span class="achievement-title">1st Rank | IIT Bombay E-Cell BnB 2022</span>
     <span class="achievement-note">Ranked 1st among 190+ teams</span>
   </div>
 
   <div class="achievement-item">
-    <span class="achievement-title">Selected by SSIP 2020</span>
+    <span class="achievement-title">Selected for SSIP 2020</span>
     <span class="achievement-note">For Project ‘Emergency Vehicle Priority System’</span>
   </div>
 </div>
+
+<!--  -->
+<!-- EXPERIENCE SECTION -->
+<!--  -->
 
 ## 📊 <strong>Experience</strong>
 
@@ -125,7 +261,7 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
 .experience-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
@@ -166,7 +302,7 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
 }
 
 .experience-org {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: #9eb1c6;
   font-style: italic;
   font-weight: 500;
@@ -187,8 +323,29 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
   <div class="experience-item">
     <div class="experience-header">
       <div>
-        <div class="experience-title">Google Summer of Code 2024</div>
-        <div class="experience-org">@NUMFOCUS</div>
+        <div class="experience-title"> Reserach Intern </div>
+        <div class="experience-org"> Working with Prof. Sandeep Manjanna</div>
+      </div>
+      <div class="experience-date">Jun – Present</div>
+    </div>
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <div>
+        <div class="experience-title"> Founder </div>
+        <div class="experience-org"> Housify</div>
+      </div>
+      <div class="experience-date">Jan – Present</div>
+    </div>
+  </div>
+
+  <div class="experience-item">
+    <div class="experience-header">
+      <div>
+        <div class="experience-title"> Contributor</div>
+        <div class="experience-org"> Google Summer of Code 2024</div>
+        <div class="experience-org"> @QuTiP @NUMFOCUS </div> 
       </div>
       <div class="experience-date">May – Sep 2024</div>
     </div>
@@ -198,7 +355,7 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
     <div class="experience-header">
       <div>
         <div class="experience-title">Data Science Intern</div>
-        <div class="experience-org">BlinkX, JM Financial</div>
+        <div class="experience-org">BlinkX by JM Financial, Mumbai</div>
       </div>
       <div class="experience-date">Jun – Aug 2024</div>
     </div>
@@ -208,7 +365,8 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
     <div class="experience-header">
       <div>
         <div class="experience-title">Research Intern</div>
-        <div class="experience-org">PRL, Ahmedabad</div>
+        <div class="experience-org">Physical Research Laboratory (PRL), </div>
+        <div class="experience-org">Ahmedabad</div>
       </div>
       <div class="experience-date">Jun – Aug 2023</div>
     </div>
