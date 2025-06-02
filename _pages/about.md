@@ -213,7 +213,7 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
 
 .achievement-note {
   font-size: 0.94rem;
-  color: #c9d1d9;
+  color: #9eb1c6;
   display: block;
 }
 </style>
@@ -258,7 +258,7 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
 ## 📊 <strong>Experience</strong>
 
 <style>
-.experience-grid {
+.exp-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -266,13 +266,13 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
 }
 
 @media (min-width: 768px) {
-  .experience-grid {
+  .exp-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.experience-item {
-  background: #161b22; /*linear-gradient(135deg, #161b22, #1e2630);*/
+.exp-item {
+  background: #161b22;
   border-left: 4px solid #00BFFF;
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -282,103 +282,112 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.experience-item:hover {
+.exp-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0, 191, 255, 0.12);
 }
 
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-start;
+/* Header now uses a two-column grid: left (title + desc) and right (date) */
+.exp-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
 }
 
-.experience-title {
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-title {
   font-weight: 600;
   font-size: 1rem;
   color: #f0f6fc;
   margin-bottom: 0.2rem;
 }
 
-.experience-org {
+.exp-desp {
   font-size: 0.95rem;
   color: #9eb1c6;
   font-style: italic;
   font-weight: 500;
 }
 
-.experience-date {
+.exp-date {
   font-size: 0.85rem;
   color: #7f8c9f;
   font-style: italic;
   white-space: nowrap;
-  margin-left: auto;
+  padding-left: 1rem;
   padding-top: 0.15rem;
 }
 </style>
 
-<div class="experience-grid">
+<div class="exp-grid">
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <div>
-        <div class="experience-title"> Reserach Intern </div>
-        <div class="experience-org"> Working with Prof. Sandeep Manjanna</div>
+  <!-- Research Intern / Plaksha University -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Research Intern</div>
+        <div class="exp-desp">Working with Prof. Sandeep Manjanna, Plaksha University</div>
       </div>
-      <div class="experience-date">Jun – Present</div>
+      <div class="exp-date">Jun – Present</div>
     </div>
   </div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <div>
-        <div class="experience-title"> Founder </div>
-        <div class="experience-org"> Housify</div>
+  <!-- Founder / Housify -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Founder</div>
+        <div class="exp-desp">Housify; fintech app for residential society management </div>
       </div>
-      <div class="experience-date">Jan – Present</div>
+      <div class="exp-date">Jan – Present</div>
     </div>
   </div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <div>
-        <div class="experience-title"> Contributor</div>
-        <div class="experience-org"> Google Summer of Code 2024</div>
-        <div class="experience-org"> @QuTiP @NUMFOCUS </div> 
+  <!-- Contributor / Google Summer of Code 2024 -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Contributor</div>
+        <div class="exp-desp">Google Summer of Code 2024 <br> @QuTiP @NUMFOCUS</div>
       </div>
-      <div class="experience-date">May – Sep 2024</div>
+      <div class="exp-date">May – Sep 2024</div>
     </div>
   </div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <div>
-        <div class="experience-title">Data Science Intern</div>
-        <div class="experience-org">BlinkX by JM Financial, Mumbai</div>
+  <!-- Data Science Intern / BlinkX by JM Financial, Mumbai -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Data Science Intern</div>
+        <div class="exp-desp">BlinkX by JM Financial, Mumbai</div>
       </div>
-      <div class="experience-date">Jun – Aug 2024</div>
+      <div class="exp-date">Jun – Aug 2024</div>
     </div>
   </div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <div>
-        <div class="experience-title">Research Intern</div>
-        <div class="experience-org">Physical Research Laboratory (PRL), </div>
-        <div class="experience-org">Ahmedabad</div>
+  <!-- Research Intern / PRL, Ahmedabad -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Research Intern</div>
+        <div class="exp-desp">Physical Research Laboratory (PRL), Ahmedabad</div>
       </div>
-      <div class="experience-date">Jun – Aug 2023</div>
+      <div class="exp-date">Jun – Aug 2023</div>
     </div>
   </div>
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <div>
-        <div class="experience-title">Game Design Intern</div>
-        <div class="experience-org">MADIEE Games</div>
+  <!-- Game Design Intern / MADIEE Games -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Game Design Intern</div>
+        <div class="exp-desp">MADIEE Games</div>
       </div>
-      <div class="experience-date">Jan – Apr 2022</div>
+      <div class="exp-date">Jan – Apr 2022</div>
     </div>
   </div>
 
