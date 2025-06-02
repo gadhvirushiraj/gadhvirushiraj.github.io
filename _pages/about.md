@@ -17,13 +17,19 @@ My interests revolve around Reinforcement Learning, Machine Learning, and Human-
 ⚡ Always eager to explore new ideas and make an impact through innovation! -->
 
 <div class="bio-box">
-<h1>Namaste World! 👋 I'm Rushiraj</h1>
-<img src="/images/ai_climbs.webp" alt="woah" style="float: right; width: 225px; margin-left: 1rem; margin-bottom: 0.5rem;">
-A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
-<br><br>
-An AI/ML Developer & Researcher, my research interests revolve around the domains of Reinforcement Learning, Machine Learning, and Human-Computer Interaction. I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community.
-<br><br>
-⚡ Always eager to explore new ideas and make an impact through innovation!
+  <h1>Namaste World! 👋 I'm Rushiraj</h1>
+  <div class="bio-content">
+    <div class="bio-text">
+      A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
+      <br><br>
+      An AI/ML Developer & Researcher, my interests revolve around Reinforcement Learning, Machine Learning, Computer Vision, and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI, and other conferences and journals.
+      <br><br>
+      Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. I also work in the industry, as the CEO & Founder of Housify (TechSurf Solutions Pvt. Ltd.).
+      <br><br>
+      ⚡ <i> Eager to explore new ideas, build stuff and make an impact through innovation! </i>
+    </div>
+    <img class="bio-img" src="/images/ai_climbs.webp" alt="woah">
+  </div>
 </div>
 
 <style>
@@ -33,8 +39,33 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   margin: 1.5rem 0;
-  overflow: auto;
+  color: white;
 }
+
+.bio-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bio-text {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.bio-img {
+  width: 225px;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .bio-content {
+    flex-direction:
+  }
+}
+
 </style>
 
 <!--  -->
@@ -332,7 +363,7 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
         <div class="exp-title">Research Intern</div>
         <div class="exp-desp">Working with Prof. Sandeep Manjanna, Plaksha University</div>
       </div>
-      <div class="exp-date">Jun – Present</div>
+      <div class="exp-date">Jun, 2025 – Present</div>
     </div>
   </div>
 
@@ -343,7 +374,18 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
         <div class="exp-title">Founder</div>
         <div class="exp-desp">Housify; fintech app for residential society management </div>
       </div>
-      <div class="exp-date">Jan – Present</div>
+      <div class="exp-date">Jan, 2025 – Present</div>
+    </div>
+  </div>
+
+  <!-- Research Intern / HTI Lab -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Research Intern</div>
+        <div class="exp-desp"> HTI Lab, Plaksha University <br> Prof. Sidhharth </div>
+      </div>
+      <div class="exp-date">Jan, 2024 – Feb, 2025</div>
     </div>
   </div>
 
@@ -354,7 +396,7 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
         <div class="exp-title">Contributor</div>
         <div class="exp-desp">Google Summer of Code 2024 <br> @QuTiP @NUMFOCUS</div>
       </div>
-      <div class="exp-date">May – Sep 2024</div>
+      <div class="exp-date">May – Sep, 2024</div>
     </div>
   </div>
 
@@ -365,7 +407,7 @@ An AI/ML Developer & Researcher, my research interests revolve around the domain
         <div class="exp-title">Data Science Intern</div>
         <div class="exp-desp">BlinkX by JM Financial, Mumbai</div>
       </div>
-      <div class="exp-date">Jun – Aug 2024</div>
+      <div class="exp-date">Jun – Aug, 2024</div>
     </div>
   </div>
 
