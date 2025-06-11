@@ -4,7 +4,6 @@ description: "QuTiP provides tools for creating and manipulating quantum states 
 image:
   - "/images/qutip-circuit1.png"
   - "/images/qutip-circuit2.png"
-permalink: /projects/adaptai/
 date: 2025-01-12
 tags: ["Open-Source", "GSoC"]
 weblink: "https://gadhvirushiraj.github.io/gsoc24/"

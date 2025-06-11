@@ -4,7 +4,6 @@ description: "PosePilot: provides corrective feedback on yoga poses by using LST
 image:
   - "/images/posepilot.png"
   - "/images/posepilot2-false.png"
-permalink: /projects/PosePilot/
 date: 2025-01-09
 tags: ["CV", "Research"]
 code: "https://github.com/gadhvirushiraj/PosePilot"
