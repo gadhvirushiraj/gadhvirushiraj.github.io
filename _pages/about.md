@@ -9,20 +9,13 @@ redirect_from:
   - /me/
 ---
 
-<!-- ![woah](/images/ai_climbs.webp){: .align-right width="225px"}
-A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
-
-My interests revolve around Reinforcement Learning, Machine Learning, and Human-Computer Interaction Research. I'm also an enthusiastic advocate for Open Source and an active contributor to its vibrant community.
-
-⚡ Always eager to explore new ideas and make an impact through innovation! -->
-
 <div class="bio-box">
   <h1>Namaste World! 👋 I'm Rushiraj</h1>
   <div class="bio-content">
     <div class="bio-text">
       A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
       <br><br>
-      An AI/ML Developer & Researcher, my interests revolve around Reinforcement Learning, Machine Learning, Computer Vision, and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI, and other conferences and journals.
+      An AI/ML Developer & Researcher and a Design lover, my interests revolve around Reinforcement Learning, Machine Learning, Computer Vision, and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI, ICRA and other conferences and journals.
       <br><br>
       Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. I also work in the industry, as the CEO & Founder of Housify (TechSurf Solutions Pvt. Ltd.).
       <br><br>
