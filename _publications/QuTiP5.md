@@ -4,5 +4,5 @@ authors: "Neill Lambert, Eric Giguère, Boxi Li, Rushiraj Gadhvi, Franco Nori et
 image: "/images/qutip5.png"
 arxiv: "https://arxiv.org/abs/2412.04705"
 date: 2025-01-02
-status: "Submitted to Physics Report"
+status: "Under Review, Physics Report"
 ---

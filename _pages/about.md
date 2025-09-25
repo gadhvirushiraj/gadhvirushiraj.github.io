@@ -349,14 +349,14 @@ redirect_from:
 
 <div class="exp-grid">
 
-  <!-- Research Intern / Plaksha University -->
+  <!-- Research Collabrator | MIT -->
   <div class="exp-item">
     <div class="exp-header">
       <div class="header-left">
-        <div class="exp-title">Research Intern</div>
-        <div class="exp-desp">Working with Prof. Sandeep Manjanna, Plaksha University</div>
+        <div class="exp-title">Research Collabrator</div>
+        <div class="exp-desp">HCI Engeneering Group, MIT</div>
       </div>
-      <div class="exp-date">Jun, 2025 – Present</div>
+      <div class="exp-date">Aug, 2025 – Present</div>
     </div>
   </div>
 
@@ -371,12 +371,23 @@ redirect_from:
     </div>
   </div>
 
+  <!-- Research Intern / Plaksha University -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="header-left">
+        <div class="exp-title">Research Intern</div>
+        <div class="exp-desp">Robotics Lab, Plaksha University</div>
+      </div>
+      <div class="exp-date">Jun, 2025 – Aug, 2025</div>
+    </div>
+  </div>
+
   <!-- Research Intern / HTI Lab -->
   <div class="exp-item">
     <div class="exp-header">
       <div class="header-left">
         <div class="exp-title">Research Intern</div>
-        <div class="exp-desp"> HTI Lab, Plaksha University <br> Prof. Sidhharth </div>
+        <div class="exp-desp">HTI (Human Technology Interaction) Lab, Plaksha University</div>
       </div>
       <div class="exp-date">Jan, 2024 – Feb, 2025</div>
     </div>
