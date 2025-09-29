@@ -17,7 +17,7 @@ redirect_from:
       <br><br>
       An AI/ML Developer & Researcher and a Design lover, my interests revolve around Reinforcement Learning, Machine Learning, Computer Vision, and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI, ICRA and other conferences and journals.
       <br><br>
-      Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. I also work in the industry, as the CEO & Founder of Housify (TechSurf Solutions Pvt. Ltd.).
+      Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. I also work in the industry, as the CEO & Founder of Housify (TechSurf Solutions).
       <br><br>
       ⚡ <i> Eager to explore new ideas, build stuff and make an impact through innovation! </i>
     </div>
