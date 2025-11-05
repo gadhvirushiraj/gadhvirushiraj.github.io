@@ -19,21 +19,19 @@ author_profile: true
   {% assign sorted_projects = site.projects | sort: 'date' | reverse %} {% for
   post in sorted_projects %}
   <div class="project-tile" data-tags="{{ post.tags | join: ',' }}">
-    <a href="{{ post.url | relative_url }}">
-      {% if post.image %}
-      <div class="image-container">
-        {% for img in post.image %}
-        <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
-        {% endfor %}
-      </div>
-      {% else %}
-      <div class="no-image">No Image</div>
-      {% endif %}
-      <h3>{{ post.title }}</h3>
-      {% if post.description %}
-      <p>{{ post.description }}</p>
-      {% endif %}
-    </a>
+    {% if post.image %}
+    <div class="image-container">
+      {% for img in post.image %}
+      <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="no-image">No Image</div>
+    {% endif %}
+    <h3>{{ post.title }}</h3>
+    {% if post.description %}
+    <p>{{ post.description }}</p>
+    {% endif %}
 
     <!-- Thin line separator -->
     <hr class="divider" />

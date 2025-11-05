@@ -10,7 +10,9 @@ redirect_from:
 ---
 
 <div class="bio-box">
-  <h1>Namaste World! 👋 I'm Rushiraj</h1>
+  <h1 class="typing-animation">
+  Namaste World! 👋 I'm Rushiraj
+  </h1>
   <div class="bio-content">
     <div class="bio-text">
       A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
@@ -27,6 +29,31 @@ redirect_from:
     </div>
   </div>
 </div>
+
+<!-- typing animation -->
+<style>
+.typing-animation {
+  display: inline-block;
+  font-family: monospace;
+  border-right: 3px solid #FFD700; /* golden blinking cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 3.5s steps(32, end) forwards,
+    blink-caret 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 30ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #FFD700; }
+}
+</style>
+
 
 <style>
 .bio-box {
