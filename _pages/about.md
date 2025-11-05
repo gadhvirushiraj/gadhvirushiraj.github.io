@@ -21,7 +21,10 @@ redirect_from:
       <br><br>
       ⚡ <i> Eager to explore new ideas, build stuff and make an impact through innovation! </i>
     </div>
-    <img class="bio-img" src="/images/ai_climbs.webp" alt="woah">
+    <div class="bio-images">
+      <img class="bio-img" src="/images/ai_climbs.webp" alt="woah">
+      <img class="bio-img" src="/images/cyclegan.png" alt="cyclegan">
+    </div>
   </div>
 </div>
 
@@ -47,8 +50,16 @@ redirect_from:
   min-width: 0;
 }
 
+.bio-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
 .bio-img {
   width: 225px;
+  height: 180px;
   margin-bottom: 0.5rem;
 }
 
