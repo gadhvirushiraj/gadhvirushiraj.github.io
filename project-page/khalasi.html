@@ -1,0 +1,485 @@
+---
+permalink: /khalasi.html
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Khalasi: Energy-Efficient Navigation for Surface Vehicles in Vortical Flow Fields - Rushiraj Gadhvi, Sandeep Manjanna">
+  <meta name="description" content="Reinforcement learning-based control of autonomous surface vehicles that exploit vortical flow structures for energy-efficient navigation, evaluated on realistic flow fields and compared to thrust-only baselines.">
+  <meta name="keywords" content="reinforcement learning, robotics, autonomous surface vehicles, marine robotics, energy-efficient control, vortical flows">
+  <meta name="author" content="Rushiraj Gadhvi, Sandeep Manjanna">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Plaksha University">
+  <meta property="og:title" content="Khalasi: Energy-Efficient Navigation for Surface Vehicles in Vortical Flow Fields">
+  <meta property="og:description" content="Reinforcement learning-based control of autonomous surface vehicles that exploit vortical flow structures for energy-efficient navigation.">
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Khalasi: Energy-Efficient Navigation for Surface Vehicles in Vortical Flow Fields">
+  <meta name="citation_author" content="Gadhvi, Rushiraj">
+  <meta name="citation_author" content="Manjanna, Sandeep">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE International Conference on Robotics and Automation (ICRA 2026)">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/images/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <title>Khalasi: Energy-Efficient Navigation for Surface Vehicles in Vortical Flow Fields</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="/project-static/css/bulma.min.css">
+  <link rel="stylesheet" href="/project-static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="/project-static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/project-static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="/project-static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="/project-static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="/project-static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="/project-static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="/project-static/js/fontawesome.all.min.js"></script>
+  <script defer src="/project-static/js/bulma-carousel.min.js"></script>
+  <script defer src="/project-static/js/bulma-slider.min.js"></script>
+  <script defer src="/project-static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Khalasi: Energy-Efficient Navigation for Surface Vehicles in Vortical Flow Fields",
+    "description": "Reinforcement learning-based control of autonomous surface vehicles that exploit vortical flow structures for energy-efficient navigation.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Rushiraj Gadhvi",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Plaksha University"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Sandeep Manjanna",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Plaksha University"
+        }
+      }
+    ],
+    "datePublished": "2026-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IEEE International Conference on Robotics and Automation (ICRA 2026)"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Khalasi: Energy-Efficient Navigation for Surface Vehicles
+              in Vortical Flow Fields</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://gadhvirushiraj.github.io" target="_blank">Rushiraj Gadhvi</a>,</span>
+                <span class="author-block">
+                  <a href="https://plaksha.edu.in/faculty-details/dr-sandeep-manjanna" target="_blank">Sandeep Manjanna</a></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">MuRAL Lab, Plaksha University<br>Under Review, ICRA 2026</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/gadhvirushiraj/khalasi" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../images/khalasi/khalasi-arch.png" alt="Banner Image" style="width: 100%; height: auto; margin-bottom: 20px;">
+      <h3 class="has-text-justified">
+      Overview of khalasi pipeline. (A) Training and evaluation environment: The agent (red) navigates toward the goal (orange) by leveraging local flow features. The green box and orange box denotes the agent and goals spawn region respectively. (B) Training pipeline: historical local velocity observations are processed through a Gaussian Process Regression (GPR) module for flow reconstruction, followed by spatial gradient extraction via a CNN encoder. The resulting latent representation, combined with positional and goal data, is input to a Soft Actor–Critic (SAC) policy. (C) Trained using parallelized environments with diverse flow variations enable better generalization across different flows.      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            For centuries, khalasi (Gujarati for sailor) have skillfully harnessed ocean currents to navigate vast waters with minimal effort. Emulating this intuition in autonomous systems remains a significant challenge, particularly for Autonomous Surface Vehicles (ASVs) tasked with long-duration missions under strict energy budgets. In this work, we present a learning- based approach for energy-efficient surface vehicle navigation in vortical flow fields, where partial observability often un- dermines traditional path-planning methods. We present an end-to-end reinforcement learning framework based on Soft Actor–Critic (SAC) that learns flow-aware navigation policies using only local velocity measurements. Through extensive evaluation across diverse and dynamically rich scenarios, our method demonstrates substantial energy savings and robust generalization to previously unseen flow conditions, offering a promising path toward long-term autonomy in ocean envi- ronments. The navigation paths generated by our proposed approach show an improvement in energy conservation 30−50% compared to the existing state-of-the-art techniques.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Energy Results</h2>
+        <table style="width:75%; margin:auto; border-collapse: collapse; text-align:center; font-size:16px; border-top:2px solid #000; border-bottom:2px solid #000;">
+          <thead style="background:#f2f2f2; border-bottom:2px solid #000;">
+            <tr>
+              <th style="padding:12px; vertical-align: middle;">Environment</th>
+              <th style="padding:12px; vertical-align: middle;">Oscillating Single Cylinder</th>
+              <th style="padding:12px; vertical-align: middle;">Static Single Cylinder</th>
+              <th style="padding:12px; vertical-align: middle;">Static Double Cylinder</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr style="border-top:1px solid #ccc;">
+              <td style="padding:12px; vertical-align: middle;"><strong>Khalasi (Ours)</strong></td>
+              <td style="padding:12px; vertical-align: middle;"><strong>111.38 ± 28.48</strong></td>
+              <td style="padding:12px; vertical-align: middle;"><strong>80.97 ± 18.93</strong></td>
+              <td style="padding:12px; vertical-align: middle;"><strong>98.40 ± 21.93</strong></td>
+            </tr>
+
+            <tr style="border-top:1px solid #ccc;">
+              <td style="padding:12px; vertical-align: middle;">Grid Based</td>
+              <td style="padding:12px; vertical-align: middle;">164.79 ± 8.54</td>
+              <td style="padding:12px; vertical-align: middle;">161.30 ± 9.23</td>
+              <td style="padding:12px; vertical-align: middle;">166.47 ± 8.65</td>
+            </tr>
+
+            <tr style="border-top:1px solid #ccc;">
+              <td style="padding:12px; vertical-align: middle;">RL Based</td>
+              <td style="padding:12px; vertical-align: middle;">183.68 ± 25.42</td>
+              <td style="padding:12px; vertical-align: middle;">174.26 ± 17.31</td>
+              <td style="padding:12px; vertical-align: middle;">179.72 ± 24.23</td>
+            </tr>
+
+            <tr style="border-top:1px solid #ccc;">
+              <td style="padding:12px; vertical-align: middle;"><strong>Mean Efficiency</strong></td>
+              <td style="padding:12px; vertical-align: middle;"><strong>35.89%</strong></td>
+              <td style="padding:12px; vertical-align: middle;"><strong>51.67%</strong></td>
+              <td style="padding:12px; vertical-align: middle;"><strong>43.07%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="/images/khalasi/dotplot.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-justified">
+          Navigation accuracy and energy efficiency across different agent spawn locations in various environments. The agent is spawned at positions on a 10 × 10 grid covering the entire environment, while the target is kept static at (290, 50). Each spawn point value is averaged over five test runs with different flow initializations. For each environment, the top plot shows accuracy across spawn locations, and the bottom plot shows energy efficiency. Results are shown for (A) the single oscillating cylinder environment, (B) the static single cylinder environment, and (C) the double static cylinder environment.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="/images/khalasi/energy-trail.png" alt="Second research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-justified">
+          Sample agent trajectories in different flow environments. The color gradient along the path represents the energy used by the agent at each point. Note: the background flow shown in the figures corresponds to the initial flow at the start of each trial. (A) Trajectories in the oscillating cylinder environment. (B) Trajectories in the static single-cylinder environment (normal von K´arm´an vortex street). (C) Trajectories in the static double-cylinder environment.ATotal Energy Consumed Accuracy(%)BC
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Navigation Results</h2>
+        <table style="width:75%; margin:auto; border-collapse:collapse; font-size:16px; text-align:center; border-top:2px solid #000; border-bottom:2px solid #000;">
+  <thead style="background:#f4f4f4; border-bottom:2px solid #000;">
+    <tr>
+      <th style="padding:12px; font-weight:bold; vertical-align:middle;">Environment</th>
+      <th style="padding:12px; font-weight:bold; vertical-align:middle;">Vertical Spawn</th>
+      <th style="padding:12px; font-weight:bold; vertical-align:middle;">L-shaped Spawn</th>
+      <th style="padding:12px; font-weight:bold; vertical-align:middle;">Grid Spawn (10×10)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr style="border-top:1px solid #bbb;">
+      <td style="padding:12px; vertical-align:middle;">Oscillating Single Cylinder</td>
+      <td style="padding:12px; vertical-align:middle;">95%</td>
+      <td style="padding:12px; vertical-align:middle;">80%</td>
+      <td style="padding:12px; vertical-align:middle;">94.33%</td>
+    </tr>
+
+    <tr style="border-top:1px solid #bbb;">
+      <td style="padding:12px; vertical-align:middle;">Static Single Cylinder</td>
+      <td style="padding:12px; vertical-align:middle;">100%</td>
+      <td style="padding:12px; vertical-align:middle;">90%</td>
+      <td style="padding:12px; vertical-align:middle;">92.98%</td>
+    </tr>
+
+    <tr style="border-top:1px solid #bbb;">
+      <td style="padding:12px; vertical-align:middle;">Static Double Cylinder</td>
+      <td style="padding:12px; vertical-align:middle;">70%</td>
+      <td style="padding:12px; vertical-align:middle;">95%</td>
+      <td style="padding:12px; vertical-align:middle;">95.3%</td>
+    </tr>
+  </tbody>
+        </table>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Flow Generalization Results</h2>
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item" style="display:flex; flex-direction:column; align-items:center;">
+          <img src="/images/khalasi/double-gyre.png" style="width:50%;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered" style="max-width:70%;">
+            Sample trajectories for double-gyre system testing. Green lines indicate successful trails and red lines indicate failed ones in both cases.
+          </h2>
+        </div>
+
+        <div class="item" style="display:flex; flex-direction:column; align-items:center;">
+          <img src="/images/khalasi/quad-gyre.png" style="width:50%;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered" style="max-width:70%;">
+            Sample trajectories for quad-gyre system testing. Green lines indicate successful trails and red lines indicate failed ones in both cases.
+          </h2>
+        </div>
+
+        <div class="item" style="display:flex; flex-direction:column; align-items:center;">
+          <img src="/images/khalasi/noaa.png" style="width:50%;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered" style="max-width:70%;">
+            Example test trajectory and the corresponding energy consumption on the NOAA dataset. Note: the background flow shown corresponds to the initial flow at the start.
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <!-- TODO: Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/4yTmlQGldk8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+  title={Your Paper Title Here},
+  author={First Author and Second Author and Third Author},
+  journal={Conference/Journal Name},
+  year={2024},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
+

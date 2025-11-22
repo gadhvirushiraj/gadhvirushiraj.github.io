@@ -16,45 +16,54 @@ author_profile: true
 </div> -->
 
 <div id="masonry-grid" class="projects-grid">
-  {% assign sorted_projects = site.projects | sort: 'date' | reverse %} {% for
-  post in sorted_projects %}
-  <div class="project-tile" data-tags="{{ post.tags | join: ',' }}">
-    {% if post.image %}
-    <div class="image-container">
-      {% for img in post.image %}
-      <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="no-image">No Image</div>
-    {% endif %}
-    <h3>{{ post.title }}</h3>
-    {% if post.description %}
-    <p>{{ post.description }}</p>
-    {% endif %}
-
-    <!-- Thin line separator -->
-    <hr class="divider" />
-
-    <div class="tags">
-      {% if post.code %}
-      <a href="{{ post.code }}" target="_blank" class="code-box">
-        <i class="fab fa-github"></i> Code
-      </a>
-      {% endif %} {% if post.weblink %}
-      <a href="{{ post.weblink }}" target="_blank" class="web-box">
-        <i class="fas fa-external-link-alt"></i>
-      </a>
+  {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+  {% for post in sorted_projects %}
+  {% if post.weblink %}
+  <a class="project-tile-link" href="{{ post.weblink }}">
+  {% endif %}
+    <div class="project-tile" data-tags="{{ post.tags | join: ',' }}">
+      {% if post.image %}
+      <div class="image-container">
+        {% for img in post.image %}
+        <img src="{{ img | relative_url }}" alt="{{ post.title }}" />
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="no-image">No Image</div>
+      {% endif %}
+      <h3>{{ post.title }}</h3>
+      {% if post.description %}
+      <p>{{ post.description }}</p>
       {% endif %}
 
-      <!-- Show only the first two tags -->
-      {% assign tag_count = 0 %} {% for tag in post.tags %} {% if tag_count < 2
-      %}
-      <span class="tag">{{ tag }}</span>
-      {% assign tag_count = tag_count | plus: 1 %} {% else %} {% break %} {%
-      endif %} {% endfor %}
+      <hr class="divider" />
+
+      <div class="tags">
+        {% if post.code %}
+        <a href="{{ post.code }}" target="_blank" class="code-box" onclick="event.stopPropagation()">
+          <i class="fab fa-github"></i> Code
+        </a>
+        {% endif %}
+        {% if post.weblink %}
+        <a href="{{ post.weblink }}" target="_blank" class="web-box" onclick="event.stopPropagation()">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        {% endif %}
+
+        {% assign tag_count = 0 %}
+        {% for tag in post.tags %}
+          {% if tag_count < 2 %}
+          <span class="tag">{{ tag }}</span>
+          {% assign tag_count = tag_count | plus: 1 %}
+          {% else %}
+          {% break %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  {% if post.weblink %}
+  </a>
+  {% endif %}
   {% endfor %}
 </div>
 
@@ -63,6 +72,20 @@ author_profile: true
   .projects-grid {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .project-tile-link {
+    text-decoration: none !important;
+    display: inline-block;
+    color: inherit;
+  }
+
+  .project-tile-link:hover {
+    text-decoration: none !important;
+  }
+
+  .project-tile-link * {
+    text-decoration: none !important;
   }
 
   /* Individual project tiles */
@@ -112,10 +135,6 @@ author_profile: true
     color: #cecece;
     line-height: 1.4;
     margin: 0;
-  }
-
-  .project-tile a {
-    text-decoration: none;
   }
 
   /* Hover effect */
