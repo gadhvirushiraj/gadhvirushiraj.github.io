@@ -17,7 +17,7 @@ redirect_from:
     <div class="bio-text">
       A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
       <br><br>
-      An AI/ML Developer & Researcher and a Design lover, my interests revolve around Reinforcement Learning, AI-Safety and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI, ICRA and other conferences and journals.
+      An AI/ML Developer & Researcher and a Design lover, my interests revolve around Reinforcement Learning, AI-Safety and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI and other conferences and journals.
       <br><br>
       Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. I am also the Founder of Housify (TechSurf Solutions).
       <br><br>
