@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <div class="bio-box">
-  <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rushiraj">
+  <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rusiraj">
   Namaste World! 👋 I'm Rushiraj
   </h1>
   <div class="bio-content">
@@ -35,7 +35,7 @@ redirect_from:
 .typing-animation {
   display: block;
   font-family: 'Fira Code', 'SFMono-Regular', Consolas, monospace;
-  font-size: clamp(1.9rem, 6vw, 3rem);
+  font-size: clamp(1.2 rem, 5vw, 2.2rem);
   line-height: 1.2;
   color: inherit;
 }
