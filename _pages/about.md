@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <div class="bio-box">
-  <h1 class="typing-animation">
+  <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rushiraj">
   Namaste World! 👋 I'm Rushiraj
   </h1>
   <div class="bio-content">
@@ -33,26 +33,116 @@ redirect_from:
 <!-- typing animation -->
 <style>
 .typing-animation {
-  display: inline-block;
-  font-family: monospace;
-  border-right: 3px solid #FFD700; /* golden blinking cursor */
-  white-space: nowrap;
-  overflow: hidden;
-  animation:
-    typing 3.5s steps(32, end) forwards,
-    blink-caret 0.8s step-end infinite;
+  display: block;
+  font-family: 'Fira Code', 'SFMono-Regular', Consolas, monospace;
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  line-height: 1.2;
+  color: inherit;
 }
 
-@keyframes typing {
-  from { width: 0ch; }
-  to { width: 30ch; }
+.typing-animation .typing-content {
+  display: inline;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.typing-animation .typing-content::after {
+  content: '';
+  display: inline-block;
+  width: 0.16em;
+  height: 1.15em;
+  margin-left: 0.15em;
+  background: #FFD700;
+  vertical-align: bottom;
+  animation: blink-caret 0.8s step-end infinite;
+}
+
+.typing-animation .typing-content.typing-content--idle::after {
+  animation: blink-caret 1.2s step-end infinite;
+}
+
+@media (max-width: 640px) {
+  .typing-animation {
+    font-size: clamp(1.5rem, 7vw, 2.1rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-animation,
+  .typing-animation .typing-content::after {
+    animation: none !important;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #FFD700; }
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
 }
 </style>
+
+<script>
+(function () {
+  const supportsObserver = 'IntersectionObserver' in window;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function initTyping(node) {
+    const text = (node.dataset.typingText || node.textContent || '').trim();
+    if (!text) return;
+
+    const content = document.createElement('span');
+    content.className = 'typing-content';
+
+    node.textContent = '';
+    node.setAttribute('aria-label', text);
+    node.append(content);
+
+    if (prefersReducedMotion) {
+      content.textContent = text;
+      content.classList.add('typing-content--idle');
+      return;
+    }
+
+    const typingDelay = Number(node.dataset.typingDelay) || 70;
+    let index = 0;
+
+    function typeNext() {
+      if (index <= text.length) {
+        content.textContent = text.slice(0, index);
+        index += 1;
+        setTimeout(typeNext, typingDelay);
+      } else {
+        content.classList.add('typing-content--idle');
+      }
+    }
+
+    typeNext();
+  }
+
+  function setup() {
+    document.querySelectorAll('.typing-animation').forEach((node) => {
+      if (supportsObserver) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              initTyping(node);
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
+        observer.observe(node);
+      } else {
+        initTyping(node);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setup);
+  } else {
+    setup();
+  }
+})();
+</script>
 
 
 <style>
@@ -93,7 +183,7 @@ redirect_from:
 /* Responsive for mobile */
 @media (max-width: 768px) {
   .bio-content {
-    flex-direction:
+    flex-direction: column;
   }
 }
 
