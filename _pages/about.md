@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 <div class="bio-box">
-  <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rusiraj">
+  <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rushiraj">
   Namaste World! 👋 I'm Rushiraj
   </h1>
   <div class="bio-content">
