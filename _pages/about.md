@@ -15,11 +15,13 @@ redirect_from:
   </h1>
   <div class="bio-content">
     <div class="bio-text">
-      A final-year undergraduate student at Plaksha University, pursuing Computer Science and majoring in Artificial Intelligence.
+      <i>An AI/ML Developer, Researcher and a Design Lover.</i>
       <br><br>
-      An AI/ML Developer & Researcher and a Design lover, my interests revolve around Reinforcement Learning, AI-Safety and Human-Computer Interaction. My work submissions are targeting A/A* venues such as CHI, AAAI and other conferences and journals.
+      My interests revolve around <i> Reinforcement Learning, AI-Safety and Human-AI Interaction (HAX) </i>. I completed my B.Tech in <i> Computer Science and Artificial Intelligence from Plaksha University. </i>
       <br><br>
-      Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. I am also the Founder of Housify (TechSurf Solutions).
+      My work submissions are targeting A/A* venues such as CHI, AAAI and other conferences and journals. Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. 
+      <br><br>
+      I am also the Founder of Housify (TechSurf Solutions).
       <br><br>
       ⚡ <i> Eager to explore new ideas, build stuff and make an impact through innovation! </i>
     </div>
@@ -504,7 +506,7 @@ redirect_from:
     <div class="exp-header">
       <div class="header-left">
         <div class="exp-title">Research Intern</div>
-        <div class="exp-desp">MuRAL Lab, Plaksha University</div>
+        <div class="exp-desp">MuRAL (Multi-Robot Autonomy and Learning Lab), Plaksha University</div>
       </div>
       <div class="exp-date">Jun, 2025 – Aug, 2025</div>
     </div>
