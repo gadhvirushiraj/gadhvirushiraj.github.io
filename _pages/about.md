@@ -373,10 +373,14 @@ redirect_from:
 </style>
 
 <div class="achievement-grid">
+  <div class="achievement-item">
+    <span class="achievement-title">Algoverse’s AI Safety Research Fellowship 2026 </span>
+    <span class="achievement-note">One of 30+ selected globally</span>
+  </div>
 
   <div class="achievement-item">
     <span class="achievement-title">Google Summer of Code 2024</span>
-    <span class="achievement-note"> One of 1,220 selected from 43K+ applicants</span>
+    <span class="achievement-note"> One of 1,220 selected globally from 43k+ applicants</span>
   </div>
 
   <div class="achievement-item">
@@ -386,22 +390,22 @@ redirect_from:
 
   <div class="achievement-item">
     <span class="achievement-title">AWS AI & ML Scholar 2023</span>
-    <span class="achievement-note">One of 2K selected from 70K+ applicants</span>
+    <span class="achievement-note">One of 2k selected globally from 70k+ applicants</span>
   </div>
 
   <div class="achievement-item">
     <span class="achievement-title">UN Millennium Fellowship 2022</span>
-    <span class="achievement-note">One of 3K selected from 31K+ applicants</span>
+    <span class="achievement-note">One of 3k selected globally from 31K+ applicants</span>
   </div>
 
   <div class="achievement-item">
     <span class="achievement-title">1st Rank | IIT Bombay E-Cell BnB 2022</span>
-    <span class="achievement-note">Ranked 1st among 190+ teams</span>
+    <span class="achievement-note">Ranked 1st among 190+ teams nationally</span>
   </div>
 
   <div class="achievement-item">
     <span class="achievement-title">Selected for SSIP 2020</span>
-    <span class="achievement-note">For Project ‘Emergency Vehicle Priority System’</span>
+    <span class="achievement-note">One of 200+ applicants statewide</span>
   </div>
 </div>
 
