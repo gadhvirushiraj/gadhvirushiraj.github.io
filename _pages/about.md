@@ -10,16 +10,16 @@ redirect_from:
 ---
 
 <div class="bio-box">
-  <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rushiraj">
-  Namaste World! 👋 I'm Rushiraj
-  </h1>
   <div class="bio-content">
     <div class="bio-text">
-      <i>An AI/ML Developer, Researcher and a Design Lover.</i>
+      <h1 class="typing-animation" data-typing-text="Namaste World! 👋 I'm Rushiraj">
+      Namaste World! 👋 I'm Rushiraj
+      </h1>
+      <u><i>AI/ML Researcher, Developer, and Design Enthusiast.</i></u>
       <br><br>
-      My interests revolve around <i> Reinforcement Learning, AI-Safety and Human-AI Interaction (HAX) </i>. I completed my B.Tech in <i> Computer Science and Artificial Intelligence from Plaksha University. </i>
+      My research work lives at the crossroads of <i> Human-AI Interaction (HAX), AI Safety, and Reinforcement Learning </i>. I graduated with a <i> B.Tech in Computer Science and Artificial Intelligence from Plaksha University. </i>
       <br><br>
-      My work submissions are targeting A/A* venues such as CHI, AAAI and other conferences and journals. Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. 
+      My work submissions are targeting A/A* venues such as CHI, UIST, AAAI and other conferences and journals. Apart from research, I'm also an enthusiastic advocate for open source and an active contributor to its vibrant community. 
       <br><br>
       I am also the Founder of Housify (TechSurf Solutions).
       <br><br>
@@ -177,8 +177,8 @@ redirect_from:
 }
 
 .bio-img {
-  width: 225px;
-  height: 180px;
+  width: 230px;
+  height: 190px;
   margin-bottom: 0.5rem;
 }
 
