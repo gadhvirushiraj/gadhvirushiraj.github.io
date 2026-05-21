@@ -24,6 +24,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
         <link rel="icon" href="/images/favicon.ico" />
         <link rel="preload" href="/arrow.svg" as="image" type="image/svg+xml" />
+        <link rel="prefetch" href="/files/RushirajGadhviCV.pdf" as="document" />
         {/* anti-flash: apply saved theme before first paint */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function(){if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');})();
