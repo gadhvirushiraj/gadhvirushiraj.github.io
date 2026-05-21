@@ -18,7 +18,7 @@ authors: Neill Lambert, Eric Giguère, Paul Menczel, Boxi Li, Patrick Hopf, Gera
   Nathan Shammah, Paul Nation, J.R. Johansson, Shahnawaz Ahmed, Simon Cross, Alexander
   Pitchford, Franco Nori
 date: 2025-10-17 00:00:00+00:00
-image: /images/qutip5.png
+image: /images/projects/qutip5.png
 paperurl: https://www.sciencedirect.com/science/article/pii/S0370157325002704
 preview_image: /images/paper-previews/2412.04705.png
 status: Accepted, Physics Report
