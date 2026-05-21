@@ -3,20 +3,21 @@
 import { useEffect, useRef } from 'react';
 
 const IMAGE_CARDS = [
-  { src: '/images/computing-corner/ai_climbs.webp',        alt: 'RL humanoid',     caption: 'Snapshot of RL training episodes — humanoid learning to traverse stairs. [AI Warehouse YT]' },
-  { src: '/images/computing-corner/cyclegan.png',           alt: 'CycleGAN',        caption: '[CycleGAN] 2017 — Putin detected as equine; feature stylized as zebra. Horse2Zebra dataset.', crop: 'top' },
-  { src: '/images/computing-corner/JacquardLoom.jpg',       alt: 'Jacquard Loom',   caption: 'Jacquard Loom (1804) — punch-card programmable loom. Literally the first "software".' },
-  { src: '/images/computing-corner/curta.jpg',              alt: 'Curta Calculator', caption: 'Curta Calculator (1948) — mechanical marvel that fits in your palm. Designed in a Nazi concentration camp by Curt Herzstark.' },
-  { src: '/images/computing-corner/neural-geometry.png',    alt: 'Neural Geometry',  caption: 'Neural feature geometry — how concepts are encoded as directions in activation space. [Goodfire Calculator]', fit: 'contain' },
-  { src: '/images/computing-corner/proptotype-google-glass.webp', alt: 'Google Glass Prototype', caption: 'Early Google Glass prototype — wearable computing before it was cool (or accepted).' },
-  { src: '/images/computing-corner/faulty-reward-functions.webp', alt: 'Faulty Reward Function', caption: 'Faulty reward function — RL agent exploits the score by spinning in circles instead of finishing the race.' },
-  { src: '/images/computing-corner/curve-detector.png',           alt: 'Curve Detector',        caption: 'Curve detector neurons in CNNs — early-layer units that fire for curved edges at any orientation. Part of the "Zoom In" thread on neural network feature visualization. [Olah et al., Distill.pub 2020]' },
-  { src: '/images/computing-corner/chinese-room.png',             alt: 'Chinese Room',          caption: 'Searle\'s Chinese Room (1980) — a thought experiment arguing syntax ≠ semantics: a system can manipulate symbols perfectly without understanding them. Still the sharpest intuition pump against strong AI.' },
-  { src: '/images/computing-corner/f-pattern.jpg',                alt: 'F-Pattern Eye Tracking', caption: 'F-Pattern eye-tracking heatmap — users scan the web in an F shape: two horizontal sweeps then a vertical drop. Every layout decision you\'ve ever made was predicted by this in 2006. [Nielsen Norman Group]' },
-  { src: '/images/computing-corner/turing-pattern.png',          alt: 'Turing Reaction-Diffusion', caption: 'Turing\'s Reaction-Diffusion (1952) — Alan Turing\'s last paper explained why leopards have spots using two chemicals diffusing at different rates. The same equations now generate procedural textures in games and films. Nobody expects Turing to have done biology.' },
+  { src: '/images/computing-corner/ai_climbs.webp',        alt: 'RL humanoid',     caption: 'RL humanoid learning to climb stairs; pure trial and error. Thousands of falls before one clean step.',                                                                                                                                                        link: 'https://www.youtube.com/watch?v=xk8wHY1AFpI' },
+  { src: '/images/computing-corner/cyclegan.png',           alt: 'CycleGAN',        caption: 'A mishap of zebraification; CycleGAN detected equine features in Putin\'s face and turned him into a zebra. Unintended; technically correct.', crop: 'top',                                                                                                    link: 'https://towardsdatascience.com/translate-a-horse-to-a-zebra-cyclegan-6c3e12e40f53/' },
+  { src: '/images/computing-corner/JacquardLoom.jpg',       alt: 'Jacquard Loom',   caption: 'Jacquard Loom (1804); a punch-card programmable loom. Literally the first "software".',                                                                                                                                                                       link: 'https://www.scienceandindustrymuseum.org.uk/objects-and-stories/jacquard-loom' },
+  { src: '/images/computing-corner/curta.jpg',              alt: 'Curta Calculator', caption: 'Curta Calculator (1948); the world\'s smallest mechanical calculator. Designed at Buchenwald concentration camp by Curt Herzstark; four arithmetic functions in a fist.',                                                                                                                          link: 'https://en.wikipedia.org/wiki/Curta' },
+  { src: '/images/computing-corner/neural-geometry.png',    alt: 'Neural Geometry',  caption: 'Goodfire\'s Geometric Calculator; numbers live on circles in activation space. Each circle a different mod base; addition is Fourier decomposition in disguise.', fit: 'contain',                                                                              link: 'https://www.goodfire.ai/research/a-geometric-calculator#' },
+  { src: '/images/computing-corner/proptotype-google-glass.webp', alt: 'Google Glass Prototype', caption: 'Google Glass prototype (2012); clay and coat hangers. Digital overlaid on physical in a day; also discovered people find it socially awkward.',                                                                                                    link: 'https://sfdesignweek.org/rapid-prototyping-google-glass/' },
+  { src: '/images/computing-corner/faulty-reward-functions.webp', alt: 'Faulty Reward Function', caption: 'Faulty reward function; the boat scores by spinning in circles instead of finishing the race. Reward hacking; the gap between what you measure and what you mean.',                                                                                link: 'https://openai.com/index/faulty-reward-functions/' },
+  { src: '/images/computing-corner/curve-detector.png',           alt: 'Curve Detector',        caption: 'Curve detector neurons in CNNs; an OpenAI finding. Early-layer units that fire for curved edges at any orientation; same neuron, any curve, any direction.',                                                                                        link: 'https://distill.pub/2020/circuits/curve-detectors/' },
+  { src: '/images/computing-corner/chinese-room.png',             alt: 'Chinese Room',          caption: 'Searle\'s Chinese Room (1980); syntax ≠ semantics. A system can manipulate symbols perfectly without understanding them; still the sharpest intuition pump against strong AI.',                                                                     link: 'https://plato.stanford.edu/entries/chinese-room/' },
+  { src: '/images/computing-corner/f-pattern.jpg',                alt: 'F-Pattern Eye Tracking', caption: 'How do humans read a webpage? Always in an F. Two horizontal sweeps then a vertical drop; every layout decision you\'ve ever made was predicted by this in 2006.',                                                                                               link: 'https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/' },
+  { src: '/images/computing-corner/turing-pattern.png',           alt: 'Turing Pattern',        caption: 'Turing Pattern (1952); no blueprint, no instruction. Just an activator and a faster-diffusing inhibitor; they self-organize into cheetah spots, zebra stripes, and your fingerprint ridges.',                                             link: 'https://en.wikipedia.org/wiki/Turing_pattern' },
+  { src: '/images/computing-corner/induction-heads.png',          alt: 'Induction Heads',       caption: 'Induction heads; see "A B … A", predict B. One head finds the first occurrence; one copies what followed. Likely the circuit behind most in-context learning in LLMs.', fit: 'contain', link: 'https://www.lesswrong.com/posts/TvrfY4c9eaGLeyDkE/induction-heads-illustrated' },
 ];
 
-const PLACEHOLDER_COUNT = 1;
+const PLACEHOLDER_COUNT = 0;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -41,18 +42,34 @@ export function ImageGrid() {
     const zoomImg  = grid.querySelector<HTMLElement>('.bio-zoom-img')!;
     const zoomText = grid.querySelector<HTMLElement>('.bio-zoom-text')!;
 
+    let hoverTimer: ReturnType<typeof setTimeout> | null = null;
+
     function reset() {
-      cards.forEach(c => c.querySelector('.bio-img-flipper')?.classList.remove('flipped'));
+      if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
+      if (grid) delete grid.dataset.locked;
+      cards.forEach(c => {
+        c.querySelector('.bio-img-flipper')?.classList.remove('flipped');
+        (c as HTMLElement).style.pointerEvents = '';
+      });
       zoomImg.className  = 'bio-zoom-img';
       zoomText.className = 'bio-zoom-text';
     }
 
     cards.forEach((card, index) => {
+      card.addEventListener('mouseleave', () => {
+        if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; }
+      });
+
       card.addEventListener('mouseenter', () => {
+        if (grid.dataset.locked) return;
+        hoverTimer = setTimeout(() => {
+        grid.dataset.locked = '1';
+        cards.forEach(c => (c as HTMLElement).style.pointerEvents = 'none');
         cards.forEach(c => c.querySelector('.bio-img-flipper')?.classList.add('flipped'));
         const isTop   = Math.floor(index / 3) <= 1;
         const imgEl   = card.querySelector<HTMLImageElement>('.bio-img-front img');
         const caption = card.dataset.caption ?? '';
+        const link    = card.dataset.link ?? '';
         if (imgEl) {
           zoomImg.style.backgroundImage    = `url('${imgEl.getAttribute('src')}')`;
           zoomImg.style.backgroundSize     = card.dataset.fit === 'contain' ? 'contain' : 'cover';
@@ -60,8 +77,18 @@ export function ImageGrid() {
           zoomImg.style.backgroundColor   = card.dataset.fit === 'contain' ? '#f5f5f5' : '';
           zoomImg.className  = `bio-zoom-img ${isTop ? 'pos-top' : 'pos-bottom'} visible`;
           zoomText.textContent = caption;
+          if (link) {
+            const a = document.createElement('a');
+            a.href = link;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.style.cssText = 'position:absolute;bottom:0.75rem;right:0.75rem;color:var(--accent);text-decoration:none;display:flex;align-items:center;pointer-events:auto;';
+            a.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+            zoomText.appendChild(a);
+          }
           zoomText.className = `bio-zoom-text ${isTop ? 'pos-bottom' : 'pos-top'} visible`;
         }
+        }, 300);
       });
     });
 
@@ -80,6 +107,7 @@ export function ImageGrid() {
           data-caption={card.caption}
           data-crop={card.crop}
           data-fit={card.fit}
+          data-link={card.link}
         >
           <div className="bio-img-flipper">
             <div className="bio-img-front">
