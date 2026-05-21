@@ -17,7 +17,7 @@ export default function PublicationsPage() {
         You can also find my articles on my{' '}
         <a href="https://scholar.google.com/citations?user=RB8fOIQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
           Google Scholar profile
-        </a>. * Equal contribution
+        </a>. <span style={{ color: 'var(--sidebar-link-color)' }}>[* Equal contribution]</span>
       </p>
 
       <PubList pubs={pubs} />
