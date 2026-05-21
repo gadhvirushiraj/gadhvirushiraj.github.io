@@ -246,12 +246,67 @@ body.panel-open #main {
   gap: 0.75rem;
 }
 
+.author-profile__avatar {
+  position: relative;
+}
+
 .author-profile__avatar img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
   border-radius: var(--radius);
+}
+
+.author-profile__avatar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 120px;
+  height: 100%;
+}
+
+.hi-bubble {
+  position: absolute;
+  top: 15%;
+  right: calc(100% + 3px);
+  width: 105px;
+  transform: translateY(-50%) scale(0.85);
+  transform-origin: right center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 10;
+}
+
+.author-profile__avatar:hover .hi-bubble {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+
+.hi-bubble svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hi-bubble path {
+  stroke: var(--font-col);
+}
+
+.hi-bubble__text {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .author-profile__name {
@@ -310,9 +365,7 @@ body.panel-open #main {
   position: fixed;
   top: 1rem;
   left: 1.25rem;
-  z-index: 999;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  z-index: 9999;
   background: none;
   border: none;
   cursor: pointer;
@@ -373,8 +426,7 @@ body.panel-open #main {
    ============================================================ */
 
 @media (max-width: 768px) {
-  /* Theme toggle: top-right so it doesn't overlap the profile */
-  #theme-toggle { top: 0.75rem; left: auto; right: 1rem; }
+  #theme-toggle { display: none; }
 
   .page-wrapper { justify-content: flex-start; align-items: stretch; }
 
@@ -430,6 +482,8 @@ body.panel-open #main {
   }
 
   .author-profile__links a { font-size: 0.75rem; }
+
+  .main-content { margin-top: 1rem; }
 
   .page-header { margin-bottom: 1rem; }
 }

@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import { HiBubble } from './HiBubble';
 
 export function AuthorProfile() {
   return (
     <div className="author-profile">
-      <div className="author-profile__avatar">
+      <div className="author-profile__avatar" role="img" aria-label="Rushiraj Gadhvi">
+        <HiBubble />
         <Image
           src="/images/rushi-styled-pic-pre.png"
           alt="Rushiraj Gadhvi"
