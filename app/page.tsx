@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './about.css';
 import { Typewriter } from '@/components/Typewriter';
@@ -10,11 +10,13 @@ import { CloseButton } from '@/components/CloseButton';
 import { ExperienceTimeline } from '@/components/ExperienceTimeline';
 import { AchievementsList } from '@/components/AchievementsList';
 
-type PanelId = 'achievements' | 'experience' | null;
+type PanelId = 'achievements' | 'experience';
 
 export default function AboutPage() {
-  const [panel, setPanel] = useState<PanelId>(null);
+  const [panel, setPanel] = useState<PanelId | null>(null);
+  const [activePanel, setActivePanel] = useState<PanelId | null>(null);
   const [mounted, setMounted] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -23,8 +25,22 @@ export default function AboutPage() {
     return () => document.body.classList.remove('panel-open');
   }, [panel]);
 
-  function toggle(id: 'achievements' | 'experience') {
-    setPanel(prev => prev === id ? null : id);
+  function toggle(id: PanelId) {
+    if (panel === id) {
+      setPanel(null);
+      clearTimeout(closeTimer.current);
+      closeTimer.current = setTimeout(() => setActivePanel(null), 900);
+    } else {
+      clearTimeout(closeTimer.current);
+      setActivePanel(id);
+      setPanel(id);
+    }
+  }
+
+  function close() {
+    setPanel(null);
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setActivePanel(null), 900);
   }
 
   const shutter = (
@@ -32,14 +48,14 @@ export default function AboutPage() {
       <div className="roller-shutter__inner">
         <div className="roller-shutter__header">
           <h2 className="roller-shutter__title">
-            {panel === 'achievements' ? 'Achievements' : 'Experience'}
+            {activePanel === 'achievements' ? 'Achievements' : 'Experience'}
           </h2>
           <div style={{ flex: 1 }} />
-          <CloseButton onClick={() => setPanel(null)} />
+          <CloseButton onClick={close} />
         </div>
         <div className="roller-shutter__body">
-          {panel === 'achievements' && <AchievementsList />}
-          {panel === 'experience' && <ExperienceTimeline />}
+          {activePanel === 'achievements' && <AchievementsList />}
+          {activePanel === 'experience' && <ExperienceTimeline />}
         </div>
       </div>
     </div>
@@ -93,7 +109,7 @@ export default function AboutPage() {
           <Button href="/projects">Projects</Button>
           <Button href="/publications">Publications</Button>
           <Button href="https://medium.com/@gadhvirushiraj" target="_blank" rel="noopener noreferrer">Blogs</Button>
-          <Button href="/files/RushirajGadhviCV.pdf" target="_blank" rel="noopener noreferrer">CV</Button>
+          <Button href="/cv">CV</Button>
           <span className="mobile-hide-btn">
             <Button variant="card" active={panel === 'achievements'} onClick={() => toggle('achievements')}>Achievements</Button>
           </span>
