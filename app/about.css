@@ -1,0 +1,486 @@
+/* ============================================================
+   ABOUT PAGE — animations, image grid, typewriter cursor
+   ============================================================ */
+
+
+/* -- Roller shutter (fixed, full-height, right wall) -------- */
+
+.roller-shutter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25vw;
+  height: 0;
+  background: var(--card);
+  z-index: 500;
+  overflow: hidden;
+  /* closing: wait for inner content to hide first */
+  transition: height 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+
+.roller-shutter--open {
+  height: 100vh;
+  /* opening: drop immediately */
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roller-shutter__inner {
+  padding: 1.5rem 1.75rem 2rem;
+  color: #282a36;
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+  /* hidden while shutter is closed or closing */
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.3s ease;
+}
+
+.roller-shutter--open .roller-shutter__inner {
+  clip-path: inset(0);
+  /* reveal downward after shutter is mostly down */
+  transition: clip-path 0.4s ease 0.5s;
+}
+
+.roller-shutter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.roller-shutter__title {
+  font-family: var(--heading);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0;
+  color: #282a36;
+}
+
+.roller-shutter__body {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #282a36;
+}
+
+
+/* -- Orange segment dividers -------------------------------- */
+
+.seg-right {
+  position: relative;
+}
+.seg-right::after {
+  content: '';
+  position: absolute;
+  right: calc(-1.5rem / 2);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--accent) 10%, var(--accent) 90%, transparent);
+  transform: translateX(50%);
+}
+
+.seg-bottom {
+  position: relative;
+}
+.seg-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: calc(-0.75rem / 2);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--accent) 10%, var(--accent) 90%, transparent);
+  transform: translateY(50%);
+}
+
+.seg-top {
+  position: relative;
+}
+.seg-top::before {
+  content: '';
+  position: absolute;
+  top: calc(-1.5rem / 2);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--accent) 10%, var(--accent) 90%, transparent);
+  transform: translateY(-50%);
+}
+
+
+/* -- Subtitle typewriter ------------------------------------ */
+
+.subtitle-typing {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0.1rem 0 0;
+  line-height: 1.3;
+  display: block;
+  min-height: 1.5em;
+  color: var(--accent);
+}
+
+.sub-wrapper {
+  background: var(--accent);
+  color: #fff;
+  padding: 0 0.3em;
+}
+
+.sub-content::after {
+  content: '';
+  display: inline-block;
+  width: 0.13em;
+  height: 1em;
+  margin-left: 0.08em;
+  background: #fff;
+  vertical-align: middle;
+  animation: sub-blink 0.8s step-end infinite;
+}
+
+@keyframes sub-blink {
+  from, to { opacity: 0; }
+  50%       { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sub-content::after { animation: none !important; opacity: 1; }
+}
+
+
+/* -- Computational history strip --------------------------- */
+
+.comp-history-strip {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: var(--heading);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--font-col);
+  opacity: 1;
+  white-space: nowrap;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+
+/* -- Achievements grid ------------------------------------- */
+
+.ach-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ach-item {
+  display: block;
+  padding: 0.65rem 0;
+  border-bottom: 2px solid rgba(40, 42, 54, 0.25);
+  position: relative;
+}
+
+.ach-item:last-child {
+  border-bottom: none;
+}
+
+.ach-num {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  padding-top: 0.2rem;
+  line-height: 1;
+}
+
+.ach-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.ach-title {
+  font-family: var(--heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+.ach-item:nth-child(even) .ach-title {
+  color: var(--font-col);
+}
+
+.ach-note {
+  font-family: var(--normal-text);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #282a36;
+  opacity: 0.55;
+  line-height: 1.3;
+}
+
+
+/* -- Experience timeline ----------------------------------- */
+
+.exp-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: calc(0.45rem - 1px);
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #282a36 8%, #282a36 92%, transparent);
+  opacity: 0.3;
+}
+
+.exp-timeline__item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.6rem 0;
+  position: relative;
+}
+
+.exp-timeline__dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #282a36;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  transition: background 0.2s;
+}
+
+.exp-timeline__item--current .exp-timeline__dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212, 130, 31, 0.25);
+}
+
+.exp-timeline__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.exp-timeline__role {
+  font-family: var(--heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #282a36;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.exp-timeline__org {
+  font-size: 0.92rem;
+  color: #282a36;
+  opacity: 0.65;
+  line-height: 1.3;
+}
+
+.exp-timeline__date {
+  font-family: var(--normal-text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 0.15rem;
+}
+
+.exp-timeline__item--current .exp-timeline__date {
+  font-weight: 700;
+}
+
+
+/* -- Image grid overlay ------------------------------------ */
+
+.bio-zoom-img,
+.bio-zoom-text {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.bio-zoom-img.pos-top,    .bio-zoom-text.pos-top    { top: 0;    border-radius: var(--radius) var(--radius) 0 0; }
+.bio-zoom-img.pos-bottom, .bio-zoom-text.pos-bottom { bottom: 0; border-radius: 0 0 var(--radius) var(--radius); }
+
+.bio-zoom-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bio-zoom-text {
+  background: var(--card);
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--font-col);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.bio-zoom-img.visible,
+.bio-zoom-text.visible { opacity: 1; }
+
+
+/* -- Image grid -------------------------------------------- */
+
+.bio-images {
+  display: grid;
+  grid-template-columns: repeat(3, 98px);
+  gap: 2px;
+  align-content: start;
+  position: relative;
+}
+
+.bio-img-card {
+  width: 98px;
+  height: 98px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.bio-img-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.bio-img-flipper.flipped { transform: rotateY(180deg); }
+
+.bio-img-front,
+.bio-img-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.bio-img-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.bio-img-back {
+  background: var(--card);
+  color: var(--font-col);
+  transform: rotateY(180deg);
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--mono);
+  box-sizing: border-box;
+}
+
+.bio-img-placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    #1e2630, #1e2630 4px,
+    #262e3a 4px, #262e3a 8px
+  );
+  border-radius: var(--radius);
+  opacity: 0.5;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+/* Mobile inline achievement/experience sections — hidden on desktop */
+.mobile-inline-section { display: none; }
+
+@media (max-width: 768px) {
+  /* Roller shutter: nearly full width */
+  .roller-shutter { width: 88vw; }
+
+  /* Hide panel-trigger buttons on mobile */
+  .mobile-hide-btn { display: none; }
+
+  /* Show inline sections on mobile */
+  .mobile-inline-section {
+    display: block;
+    width: 100%;
+    order: 4;
+    margin-top: 0.5rem;
+  }
+
+  .mobile-inline-section + .mobile-inline-section {
+    margin-top: 0.5rem;
+  }
+
+  .about-nav-section {
+    padding-top: 2rem;
+  }
+
+  .mobile-inline-section h3 {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Hide right-side accent divider */
+  .seg-right::after { display: none; }
+
+  /* Bio column: full width */
+  .seg-right { min-width: 0 !important; width: 100%; }
+
+  /* Reorder: bio → nav buttons → achievements → experience → image grid */
+  .seg-right         { order: 1; }
+  .about-nav-section { order: 2; width: 100%; }
+  .about-img-section { order: 5; width: 100%; justify-content: center; }
+
+  /* Tighten stroke above nav buttons */
+  .seg-top::before { top: -0.5rem; }
+
+  /* Equal spacing above and below the seg-bottom stroke */
+  .seg-bottom + div { margin-top: 0.5rem; }
+
+  /* Hide vertical history strip */
+  .comp-history-strip { display: none; }
+
+  /* Image grid: smaller tiles */
+  .bio-images {
+    grid-template-columns: repeat(3, 80px);
+    margin: 0 auto;
+  }
+
+  .bio-img-card { width: 80px; height: 80px; }
+}
+
+@media (max-width: 480px) {
+  .roller-shutter { width: 96vw; }
+
+  /* 2-column image grid on small phones */
+  .bio-images { grid-template-columns: repeat(2, 1fr); }
+
+  .bio-img-card { width: 100%; height: auto; aspect-ratio: 1; }
+
+  .subtitle-typing { font-size: 1rem; }
+}

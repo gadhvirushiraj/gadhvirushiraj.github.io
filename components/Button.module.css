@@ -1,0 +1,116 @@
+.button {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--font-col);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-family: var(--normal-text);
+  font-size: 0.95rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--accent);
+  opacity: 1;
+}
+
+.buttonCard {
+  background-color: var(--card-inverse);
+  color: var(--bg);
+}
+
+.buttonCard:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.buttonCard .iconWrapper {
+  background-color: var(--bg);
+  color: var(--font-col);
+}
+
+.buttonCard .iconSvg {
+  transform: rotate(135deg);
+}
+
+.button:hover .iconWrapper {
+  color: var(--accent);
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--font-col);
+  background-color: var(--bg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.iconSvgCopy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover .iconSvg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .iconSvgCopy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+/* Card variant: copy fully off-screen; 400% clears the 25px wrapper */
+.buttonCard .iconSvgCopy {
+  transform: rotate(135deg) translate(0, 400%);
+}
+
+/* Card variant: exit lower-left, preserving rotation */
+.buttonCard:hover .iconSvg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(135deg) translate(0, -150%);
+}
+
+/* Card variant: copy enters center with rotation */
+.buttonCard:hover .iconSvgCopy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: rotate(135deg);
+}
+
+/* Active (panel open): arrow points straight up; transition animates the click rotation */
+.buttonCardActive .iconSvg {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Active: copy starts straight below — rotate(-45deg) translate(150%,150%) → screen (0, +212%) */
+.buttonCardActive .iconSvgCopy {
+  transform: rotate(-45deg) translate(150%, 150%);
+}
+
+/* Active hover: exit straight up */
+.buttonCardActive:hover .iconSvg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-45deg) translate(-150%, -150%);
+}
+
+/* Active hover: copy enters from straight below */
+.buttonCardActive:hover .iconSvgCopy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: rotate(-45deg);
+}
