@@ -16,9 +16,9 @@ abstract: Personalization is a critical yet often overlooked factor in boosting 
 arxiv: https://arxiv.org/abs/2503.09150
 authors: Rushiraj Gadhvi*, Soham Petkar*, Priyansh Desai*, Sidhharth
 date: 2025-02-23 00:00:00+00:00
-image: /images/projects/adaptai-arch.png
+image: /images/projects/adaptai-arch.webp
 paperurl: https://dl.acm.org/doi/10.1145/3706599.3720284
-preview_image: /images/paper-previews/2503.09150.png
+preview_image: /images/paper-previews/2503.09150.webp
 status: Accepted, CHI'25 LBW
 title: 'AdaptAI: A Personalized Solution to Sense Your Stress, Fix Your Mess, and
   Boost Productivity'

@@ -16,8 +16,8 @@ abstract: For centuries, khalasi (Gujarati for sailor) have skillfully harnessed
 arxiv: https://arxiv.org/abs/2512.06912
 authors: Rushiraj Gadhvi, Sandeep Manjanna
 date: 2026-01-01 00:00:00+00:00
-image: /images/projects/khalasi_img.png
-preview_image: /images/paper-previews/2512.06912.png
+image: /images/projects/khalasi_img.webp
+preview_image: /images/paper-previews/2512.06912.webp
 status: Under Review
 title: 'Khalasi: Energy-Efficient Navigation for Surface Vehicles in Vortical Flow
   Fields'

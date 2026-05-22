@@ -1,7 +1,7 @@
 ---
 title: "CouchWall"
 description: "Couchwall is an intutive drag-and-drop tool for designing perfect art placements. Visualize, create, and style with confidence before you hang! Made with NextJS as a Weekend Project."
-image: "/images/projects/couchwall.png"
+image: "/images/projects/couchwall.webp"
 date: 2025-02-11
 tags: ["Fun", "WebDev"]
 code: "https://github.com/gadhvirushiraj/couchwall"

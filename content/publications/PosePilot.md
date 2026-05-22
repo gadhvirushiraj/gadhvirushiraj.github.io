@@ -20,9 +20,9 @@ abstract: Automated pose correction remains a significant challenge in AI-driven
 arxiv: https://arxiv.org/abs/2505.19186
 authors: Rushiraj Gadhvi*, Priyansh Desai*, Sidhharth
 date: 2025-03-01 00:00:00+00:00
-image: /images/projects/posepilot.png
+image: /images/projects/posepilot.webp
 paperurl: https://doi.org/10.1007/978-3-031-99568-2_17
-preview_image: /images/paper-previews/2505.19186.png
+preview_image: /images/paper-previews/2505.19186.webp
 status: Accepted, IbPRIA'25
 title: 'PosePilot: Edge-AI Solution for Posture Correction in Physical Exercises'
 ---
