@@ -16,7 +16,7 @@ export default function AboutPage() {
   const [panel, setPanel] = useState<PanelId | null>(null);
   const [activePanel, setActivePanel] = useState<PanelId | null>(null);
   const [mounted, setMounted] = useState(false);
-  const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => { setMounted(true); }, []);
 
