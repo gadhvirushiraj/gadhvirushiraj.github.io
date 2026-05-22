@@ -30,7 +30,7 @@
 
 .project-tile-wrap:hover .project-tile {
   transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 0 0 2px var(--accent);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 4px 24px color-mix(in srgb, var(--accent) 75%, transparent);
 }
 
 .project-tile__img {

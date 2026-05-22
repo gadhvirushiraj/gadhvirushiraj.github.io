@@ -292,9 +292,6 @@ body.panel-open #main {
   display: block;
 }
 
-.hi-bubble path {
-  stroke: var(--font-col);
-}
 
 .hi-bubble__text {
   position: absolute;
