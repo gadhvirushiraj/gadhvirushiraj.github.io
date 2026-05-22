@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { AuthorProfile } from "@/components/AuthorProfile";
 import { ViewTransitions } from "@/components/ViewTransitions";
 import { ShootingStars } from "@/components/ShootingStars";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Rushiraj Gadhvi",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `
           (function(){if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');})();
         `}} />
+        <GoogleAnalytics />
       </head>
       <body>
         <ShootingStars />
