@@ -7,7 +7,7 @@ export function AuthorProfile() {
       <div className="author-profile__avatar" role="img" aria-label="Rushiraj Gadhvi">
         <HiBubble />
         <Image
-          src="/images/rushi-styled-pic-pre.png"
+          src="/images/rushi-styled-pic.webp"
           alt="Rushiraj Gadhvi"
           width={190}
           height={190}
