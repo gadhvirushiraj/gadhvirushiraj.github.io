@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Button.module.css';
 
 const DownloadIcon = () => (
@@ -45,7 +46,11 @@ export function Button({ href, children, target, rel, variant = 'default', onCli
   );
 
   if (href) {
-    return <a href={href} className={cls} target={target} rel={rel} onClick={onClick} download={download ?? undefined}>{inner}</a>;
+    const isExternal = href.startsWith('http') || href.startsWith('mailto') || target === '_blank';
+    if (isExternal || download) {
+      return <a href={href} className={cls} target={target} rel={rel} onClick={onClick} download={download ?? undefined}>{inner}</a>;
+    }
+    return <Link href={href} className={cls} onClick={onClick}>{inner}</Link>;
   }
   return <button className={cls} onClick={onClick}>{inner}</button>;
 }
