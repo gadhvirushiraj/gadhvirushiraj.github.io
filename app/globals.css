@@ -309,13 +309,13 @@ body.panel-open #main {
 .author-profile__name {
   font-family: var(--heading);
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0;
   line-height: 1.2;
 }
 
 .author-profile__bio {
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   color: var(--sidebar-link-color);
   margin: 0;
   line-height: 1.4;
@@ -335,7 +335,7 @@ body.panel-open #main {
   grid-template-columns: 1.1rem 1fr;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.94rem;
   color: var(--sidebar-link-color);
   transition: color 0.15s;
   text-decoration: none;
@@ -345,7 +345,7 @@ body.panel-open #main {
 
 .author-profile__links i,
 .author-profile__links svg {
-  font-size: 0.85rem;
+  font-size: 0.94rem;
   text-align: center;
   justify-self: center;
 }
@@ -470,8 +470,8 @@ body.panel-open #main {
     align-self: end;
   }
 
-  .author-profile__name { font-size: 1rem; margin-bottom: 0.15rem; }
-  .author-profile__bio  { font-size: 0.72rem; }
+  .author-profile__name { font-size: 1.4rem; margin-bottom: 0.15rem; }
+  .author-profile__bio  { font-size: 0.94rem; }
 
   .author-profile__links {
     grid-area: links;

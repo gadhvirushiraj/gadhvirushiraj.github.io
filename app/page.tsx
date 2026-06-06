@@ -79,15 +79,14 @@ export default function AboutPage() {
           {/* Bio card */}
           <div className="flex-1 px-6 py-5" style={{ background: 'var(--card)', color: 'var(--font-col)', borderRadius: 'var(--radius)' }}>
             <p style={{ margin: `0 0 var(--para-gap) 0` }}>
-              My research work lives at the crossroads of <i>Human-AI Interaction (HAX), AI Safety, and Reinforcement Learning</i>.
-              I graduated with a <i>B.Tech in Computer Science and Artificial Intelligence from Plaksha University.</i>
+              My research interests revolve around <i>Human-AI Interaction, AI Safety, and Reinforcement Learning</i>.
+              More recently, I have developed a deeper interest in <i>Interpretability</i> and am actively exploring the space.
+              I recently graduated with a B.Tech in Computer Science and AI from Plaksha University.
             </p>
             <p style={{ margin: `0 0 var(--para-gap) 0` }}>
-              My work submissions are targeting A/A* venues such as CHI, UIST, AAAI and other conferences and journals.
-              Apart from research, I&apos;m also an enthusiastic advocate for open source and an active contributor to its vibrant community.
-            </p>
-            <p style={{ margin: `0 0 var(--para-gap) 0` }}>
-              I am also the Founder of Housify (TechSurf Solutions).
+              I have published my research outputs at several top conferences and journals.
+              Beyond research, I&apos;m also an enthusiastic advocate for open source and an active contributor to its vibrant community.
+              I am also the Founder of Housify (TechSurf Solutions); it keeps me connected to the real-world, product side of things.
             </p>
             <p style={{ margin: 0 }}>
               <i className="fas fa-bolt" style={{ color: 'var(--accent)' }} /> <i>Eager to explore new ideas, build stuff and make an impact through innovation!</i>
