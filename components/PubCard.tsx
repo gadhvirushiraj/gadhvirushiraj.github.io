@@ -3,12 +3,21 @@ import type { Publication } from '@/lib/publications';
 
 const PREVIEW_LEN = 220;
 
+function AuthorToken({ name }: { name: string }) {
+  const hasstar = name.endsWith('*');
+  const clean = hasstar ? name.slice(0, -1) : name;
+  const isMe = clean.trim() === 'Rushiraj Gadhvi';
+  const inner = isMe ? <strong>{clean}</strong> : <>{clean}</>;
+  return <>{inner}{hasstar && <sup>*</sup>}</>;
+}
+
 function AuthorsList({ authors }: { authors: string }) {
+  const parts = authors.split(', ');
   return (
     <p className="pub-card__authors">
-      {authors.split(/(Rushiraj Gadhvi\*?)/g).map((part, i) =>
-        part.startsWith('Rushiraj Gadhvi') ? <strong key={i}>{part}</strong> : part
-      )}
+      {parts.map((name, i) => (
+        <span key={i}><AuthorToken name={name} />{i < parts.length - 1 ? ', ' : ''}</span>
+      ))}
     </p>
   );
 }
@@ -42,6 +51,11 @@ export function PubCard({ pub, expanded, onToggle }: { pub: Publication; expande
             {pub.arxiv && (
               <a href={pub.arxiv} target="_blank" rel="noopener noreferrer" className="pub-card__btn">
                 <i className="ai ai-arxiv" /> arXiv
+              </a>
+            )}
+            {pub.openreview && (
+              <a href={pub.openreview} target="_blank" rel="noopener noreferrer" className="pub-card__btn">
+                <i className="ai ai-open-access" /> OpenReview
               </a>
             )}
             {pub.paperurl && (

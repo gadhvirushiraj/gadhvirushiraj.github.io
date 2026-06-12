@@ -11,6 +11,7 @@ export interface Publication {
   date: string;
   status: string;
   arxiv?: string;
+  openreview?: string;
   paperurl?: string;
   abstract?: string;
 }
@@ -32,6 +33,7 @@ export function getPublications(): Publication[] {
         date:          data.date ? String(data.date) : '',
         status:        data.status        ?? '',
         arxiv:         data.arxiv,
+        openreview:    data.openreview,
         paperurl:      data.paperurl,
         abstract:      data.abstract,
       } as Publication;
