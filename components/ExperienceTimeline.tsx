@@ -2,14 +2,14 @@ const EXPERIENCE = [
   {
     role: 'Research Collaborator',
     org: 'HCI Engineering Group, MIT',
-    date: 'Aug 2025 – Present',
-    current: true,
+    date: 'Aug 2025 – Mar 2026',
+    current: false,
   },
   {
     role: 'Founder',
     org: 'Housify (TechSurf Solutions)',
-    date: 'Jan 2025 – Present',
-    current: true,
+    date: 'Jan 2025 – Jan 2026',
+    current: false,
   },
   {
     role: 'Research Intern',
